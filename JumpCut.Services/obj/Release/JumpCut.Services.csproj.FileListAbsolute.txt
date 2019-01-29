@@ -1,0 +1,11 @@
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Services\bin\Release\JumpCut.Services.dll
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Services\bin\Release\JumpCut.Services.pdb
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Services\bin\Release\JumpCut.Common.dll
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Services\bin\Release\Newtonsoft.Json.dll
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Services\bin\Release\RestSharp.dll
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Services\bin\Release\JumpCut.Common.pdb
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Services\bin\Release\Newtonsoft.Json.xml
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Services\bin\Release\RestSharp.xml
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Services\obj\Release\JumpCut.Services.csprojResolveAssemblyReference.cache
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Services\obj\Release\JumpCut.Services.dll
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Services\obj\Release\JumpCut.Services.pdb

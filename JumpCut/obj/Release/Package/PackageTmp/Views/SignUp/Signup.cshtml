@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Signup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts
+{
+
+    }
+<div class="wrap-login100 p-l-40 p-r-40 p-t-20 p-b-20">
+    <form class="login100-form validate-form flex-sb flex-w" id="frmSignUp">
+
+        <div class="p-t-p-b-9">
+            <span class="txt1">
+                Full Name
+            </span>
+        </div>
+        <div class="wrap-input100 validate-input" maxlength="60"  >
+            <input class="input100" type="text" data-custom-text="Full name is required"  name="fullname" >
+            <span class="focus-input100"></span>
+        </div>
+
+        <div class="p-t-13 p-b-9">
+            <span class="txt1">
+                Email
+            </span>
+        </div>
+        <div class="wrap-input100 validate-input" maxlength="100" >
+            <input class="input100" type="text" data-custom-text="Vallid email is required" name="email" >
+            <span class="focus-input100"></span>
+        </div>
+
+        <div class="p-t-13 p-b-9">
+            <span class="txt1">
+                Password
+            </span>
+        </div>
+        <div class="wrap-input100 validate-input" maxlength="50" >
+            <input id="txtPassword" class="input100" type="password" data-custom-text="Minimum length for password should be 8 characters" name="password">
+            <span class="focus-input100"></span>
+        </div>
+
+        <div class="p-t-13 p-b-9">
+            <span class="txt1">
+                Confirm Password
+            </span>
+        </div>
+        <div class="wrap-input100 validate-input" maxlength="50" >
+            <input id="txtConfirmPassword" class="input100" type="password" data-custom-text="Minimum length for password should be 8 characters" name="confirmpassword">
+            <span class="focus-input100"></span>
+        </div>
+
+        <div class="container-login100-form-btn m-t-17">
+            <button id="btnSignUp" class="login100-form-btn">
+                Sign Up
+            </button>
+        </div>
+
+        <div class="w-full text-center p-t-55">
+            <span class="txt2">
+                Already Registered?
+            </span>
+
+            <a href="@Url.Action("Login","User")" class="txt2 bo1">
+                Login Here
+            </a>
+        </div>
+    </form>
+</div>
+<script src="~/Content/Scripts/Custom/Signup.js"></script>
+

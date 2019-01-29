@@ -1,0 +1,72 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>JumpCut Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    @*<link rel="icon" type="image/png" href="images/icons/favicon.ico" />*@
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/Style/External/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/Style/External/jquery-ui.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/Style/External/jquery-ui.theme.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/Style/External/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/Style/External/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/Style/External/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/Style/External/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/Style/External/animsition.min.css">
+    <!--===============================================================================================-->
+    @*<link rel="stylesheet" type="text/css" href="~/Content/Style/External/select2.min.css">*@
+    <!--===============================================================================================-->  
+    @*<link rel="stylesheet" type="text/css" href="~/Content/Style/External/daterangepicker.css">*@
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/Style/Custom/util.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Style/Custom/main.css">
+    <!--===============================================================================================-->
+
+</head>
+<body>
+    <div class="limiter">
+        <div class="container-login100" >
+            @RenderBody()
+            </div>
+        </div>
+    <div class="loader" style="visibility: hidden;"></div>
+
+    <script src="~/Content/Scripts/External/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/Scripts/External/jquery-ui.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/Scripts/External/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/Scripts/External/popper.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/Scripts/External/tooltip.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/Scripts/External/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    @*<script src="~/Content/Scripts/External/select2.min.js"></script>*@
+    <!--===============================================================================================-->
+    @*<script src="~/Content/Scripts/External/moment.min.js"></script>*@
+    @*<script src="~/Content/Scripts/External/daterangepicker.js"></script>*@
+    <!--===============================================================================================-->
+    @*<script src="vendor/countdowntime/countdowntime.js"></script>*@
+    <!--===============================================================================================-->
+    <script src="~/Content/Scripts/Custom/main.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
