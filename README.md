@@ -92,11 +92,11 @@ I am using MS SQL Server database for this project. Tables are mentioned below:
 <h4>Why Stored Procedures</h4>
 I have used stored procedures here to execute queries into database. There are 3 main reasons for using stored procedures over other methods:
 
-1. Moduler Approach - If we need to change anything in our query. We only need to change that query and execute ALTER statement of stored procedure in database and we are done. It is so easy to manage database with stored procedure rather than any other approach. 
+1. <b>Moduler Approach </b> - If we need to change anything in our query. We only need to change that query and execute ALTER statement of stored procedure in database and we are done. It is so easy to manage database with stored procedure rather than any other approach. 
 
-2. Safety - Stored procedure provide us safety from SQL injection and it also provide a layer of encapsulation for our database logics.
+2. <b>Safety</b> - Stored procedure provide us safety from SQL injection and it also provide a layer of encapsulation for our database logics.
 
-3. Fast Execution - As it is commonly known as that SQL Server stored a parsed and complied version of stored procedure. So on re-occuring use of same query this will same us enourmous time and system resources.
+3. <b>Fast Execution</b> - As it is commonly known as that SQL Server stored a parsed and complied version of stored procedure. So on re-occuring use of same query this will same us enourmous time and system resources.
 
 
 At the end, I personally prefer flat table structures where I can get all of our most used columns in one table rather having to create multiple views, or write joins to fetch data from different tables. Flat table structure save time and increase database processing speed. It also creates problem when our table grows too much. We can deal that problem with data archiving. Tables which we were going to need here are not such tables which grows that much. 
@@ -118,11 +118,54 @@ Serial No    |   Column Name | DataType     | Default Value | Nullable     | Pur
 11 | IsActive | Bit | False | No | User Status. Alternate of Deleting User
 12 | PasswordResetRequest | Bit | False | No | Password Reset Requested Or Not
 13 | PasswordResetKey | UniqueIdentifier | No | Yes | Password Reset Token
-14 | DateCreated | DateTime | GetDate() | | No | Timestamp when new user is created
-15 | DateModified | DateTime | No | Yes | Timestamp when user record is modified
-16 | ModifiedBy | Int | No | Yes | Admin Id if admin modified your account. For future use.
+14 | DateCreated | DateTime | GetDate() | | No | Timestamp When New User is Created
+15 | DateModified | DateTime | No | Yes | Timestamp When User Record is Modified
+16 | ModifiedBy | Int | No | Yes | UserId if Who Modified User Record. For Future Use.
 
 <h4> UsersModified Table </h4>
 I have created this table to keep audit track of changes being made in Users table. Because this is our main table and if there is some problem arises we should be able to track and fix that. So I have created UsersModified table. Every new record which is never modified will only be available in Users table and if a record is ever modified then for every update executed on Users table, old record will be inserted into UsersModifed table and DateModified column will be updated in Users table. This will be done by Triggers created on Users table.
 
 We can keep this table in a separate database so that our production database and its transanction log will not become heavier day by day.
+
+<h4>Roles</h4>
+Serial No    |   Column Name | DataType     | Default Value | Nullable     | Purpose
+------------ | ------------- | -------------| ------------- | -------------| -------------
+1 | RoleId | Int | Auto Increment of 1 | No | Primary Key of Table
+2 | RoleName | Varchar(20) | No | No | Name of Role
+3 | IsActive | Bit | True | No | Status of Role
+4 | DateCreated | DateTime | GetDate() | No |  Timestamp When New User is Created
+5 | CreatedBy | Int | No | No | UserId who Created This Role
+6 | DateModified | DateTime | No | Yes |  Timestamp When Role Record is Modified
+7 | ModifiedBy | Int | No | Yes | UserId if Who Modified User Record. For Future Use
+
+This table will help us define different roles. Currently we only had two roles. User and APIUser
+
+<h4>ExceptionLog</h4>
+Serial No    |   Column Name | DataType     | Default Value | Nullable     | Purpose
+------------ | ------------- | -------------| ------------- | -------------| -------------
+1 | ExceptionId | Int | Auto Increment of 1 | No | Primary Key of Table
+2 | ExceptionMessage | Varchar(Max) | No | No | Summary Message of Exception
+3 | ExceptionStackTrace | Varchar(Max) | No | No | Contains call trace of exception causing method 
+4 | InnerExceptionMessage | Varchar(Max) | No | No |  Summary Message of Inner Exception
+5 | InnerExceptionStackTrace | Varchar(Max) | No | No | Contains call trace of inner exception causing method
+6 | APIEndpoint | Varchar(100) | No | No |  Web API Exception Causing EndPoint URL
+7 | DateCreated | DateTime | GetDate() | No | Timestamp of When Exception is Created
+
+This table keeps record of all exception caused by applicaiton and ExceptionId is sent to user if he/she want to contact support. If customer shares exception id (named as Error Code on front end) then it will be easier to trace and fix the problem. Ever if user does not share we are still capturing in our database. I am also using some fixed error codes to identify some logical errors.
+
+<h4>APIAccessToken</h4>
+
+For database connectivity I have created an independent REST API and all database operations are being performed by this API. Our web application is not interacting with database directly. This helps in maintaining security of our web server. To use web api user have to generate access token. We are storing that access token in this table.
+
+Serial No    |   Column Name | DataType     | Default Value | Nullable     | Purpose
+------------ | ------------- | -------------| ------------- | -------------| -------------
+1 | AccessTokenId | Int | Auto Increment of 1 | No | Primary Key of Table
+2 | UserId | Int | No | No | Foreign Key from Users Table
+3 | AccessToken | Varchar(Max) | No | No | Access Token Generated by Web API 
+4 | IsActive  | Bit | False | No |  Status of Access Token 
+5 | DateGenerated | DateTime | GetDate() | No | Timestamp of When AccessToken is Created
+6 | ValidForDays | Int | No | No |  No of Days Access Token is Valid After Generation
+7 | ModifiedOn | DateTime | No | No | Timestamp of When Record is Modified
+
+
+Note: For frontend of this application I have used a free template from ColorLib. Although I did some modification. But reference to theme is here: https://colorlib.com/etc/lf/Login_v5/index.html 
