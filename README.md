@@ -34,6 +34,7 @@ When ever I code, there are three things in my mind:
 </ul>
 To implement these I have included separate projects for calling Web Service API, and a sparate project named as JumptCut.Common which serves two purposes, Configurations and Entities. In our actual project I would like to move entities to a completely separate project and these entities will be used in both Web Application and Web API (REST API). This will help us maintain source code at one place only and on second place DLL will be used. 
 
+
 No controller is calling REST API directly all calls are going through "JumpCut.Services" project. Currently there is only one service named as "ServiceLayer". In future when we will add more modules in it. All modules will have independent services in "JumpCut.Services" project. We will also use this layer to perform basic data manipulation on data received from API. So if there is some change required in future which affects only data manipulation we can simply work this project and do a partial deployment on server. By doing this we can save time and risk of full deployment.
 
 I am also re-using code for validations at front end and back end levels. For front end I have used HTML attribute "name" to identify elements instead of using IDs (which should be unique application wide). By using name I have re-used methods to display error messages for each control. On back end, Validations method for each control type is written (FullName, Email and Password). Then these methods are being used for validations of all pages. 
