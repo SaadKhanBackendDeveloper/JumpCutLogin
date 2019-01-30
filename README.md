@@ -4,13 +4,13 @@ I have developed this project using ASP.NET with MVC, C# as server side language
 
 ![Application Structure](JumpCut/Content/GitHub/AppStruct.png)
 
-        
-      
+ <h3>Pages</h3>
 This project has below-mentioned pages:
 <ol>
-  <li>Signup
-  <li>Login
-  <li>Password Reset Request
-  <li>Password Reset
+  <li><b>Signup</b> - Used To Create New User and Confirm User Email
+  <li><b>Login</b> - Used To Login Using Already Created Account
+  <li><b>Password Reset Request</b> - Used To Send Password Reset Instruction To User Email
+  <li><b>Password Reset</b> - Used To Update New Password Entered By User
+  <li><b>Home</b> - Home Page Displayed After User Successfully Logged In
 </ol>
 
