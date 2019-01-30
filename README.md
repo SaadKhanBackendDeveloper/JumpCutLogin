@@ -1,5 +1,7 @@
 # JumpCut Hiring Project
 
+<h3>This project is Live at: http://saadzafar.com </h3>
+
 I have developed this project using ASP.NET with MVC, C# as server side language and SQL server as database. This project does not interact directly with database at any level. <b>All of its database level operations are being done by REST API specially developed for this project.</b> Below-mentioned is overview of application Request and Response flow:
 
 ![Application Structure](JumpCut/Content/GitHub/AppStruct.png)
@@ -128,6 +130,7 @@ I have created this table to keep audit track of changes being made in Users tab
 We can keep this table in a separate database so that our production database and its transanction log will not become heavier day by day.
 
 <h4>Roles</h4>
+
 Serial No    |   Column Name | DataType     | Default Value | Nullable     | Purpose
 ------------ | ------------- | -------------| ------------- | -------------| -------------
 1 | RoleId | Int | Auto Increment of 1 | No | Primary Key of Table
@@ -141,6 +144,7 @@ Serial No    |   Column Name | DataType     | Default Value | Nullable     | Pur
 This table will help us define different roles. Currently we only had two roles. User and APIUser
 
 <h4>ExceptionLog</h4>
+
 Serial No    |   Column Name | DataType     | Default Value | Nullable     | Purpose
 ------------ | ------------- | -------------| ------------- | -------------| -------------
 1 | ExceptionId | Int | Auto Increment of 1 | No | Primary Key of Table
