@@ -77,5 +77,52 @@ As I am using a shared and cheap web hosting so I have limited to access to user
 
 These are some of the steps which I have implemented. Although I also wanted to implment safety from brute force attacks. Which can be implemented in production environment. Apart from this there are many other securities which is necessary for securing web applications.
 
+<h3>Database</h3>
+
+I am using MS SQL Server database for this project. Tables are mentioned below: 
+
+<ol>
+ <li> Users
+  <li> UsersModified
+   <li> Roles
+    <li> ExceptionLog
+     <li> APIAccessToken
+ </ol>
+
+<h4>Why Stored Procedures</h4>
+I have used stored procedures here to execute queries into database. There are 3 main reasons for using stored procedures over other methods:
+
+1. Moduler Approach - If we need to change anything in our query. We only need to change that query and execute ALTER statement of stored procedure in database and we are done. It is so easy to manage database with stored procedure rather than any other approach. 
+
+2. Safety - Stored procedure provide us safety from SQL injection and it also provide a layer of encapsulation for our database logics.
+
+3. Fast Execution - As it is commonly known as that SQL Server stored a parsed and complied version of stored procedure. So on re-occuring use of same query this will same us enourmous time and system resources.
 
 
+At the end, I personally prefer flat table structures where I can get all of our most used columns in one table rather having to create multiple views, or write joins to fetch data from different tables. Flat table structure save time and increase database processing speed. It also creates problem when our table grows too much. We can deal that problem with data archiving. Tables which we were going to need here are not such tables which grows that much. 
+
+<h4>Users Table</h4>
+
+Serial No    |   Column Name | DataType     | Default Value | Nullable     | Purpose
+------------ | ------------- | -------------| ------------- | -------------| -------------
+1 | UserId | Int | Auto Increment of 7 | No | Primary Key of Table
+2 | FullName | Varchar(60) | No | No | Name of User
+3 | UserPassword | Varchar(Max) | No | No | Encrypted Password of User
+4 | EmailId | Varchar(100) | No | No | Email of user
+5 | RoleId | Int | No | No | Foreign Key From Roles Table
+6 | EmailVerificationKey | UniqueIdentifier | No | No | Email Confirmation Token
+7 | EmailVerified | BIT | False | No | Email Verification Status
+8 | EmailVerificationDate | DateTime | No | Yes | Timestamp When Email Verified
+9 | LastLoginAttempt | DateTime | No | Yes | Timestamp of Last Login Attempt
+10 | LastLoginSuccess | Bit | No | Yes | Outcome of Last Login Attempt
+11 | IsActive | Bit | False | No | User Status. Alternate of Deleting User
+12 | PasswordResetRequest | Bit | False | No | Password Reset Requested Or Not
+13 | PasswordResetKey | UniqueIdentifier | No | Yes | Password Reset Token
+14 | DateCreated | DateTime | GetDate() | | No | Timestamp when new user is created
+15 | DateModified | DateTime | No | Yes | Timestamp when user record is modified
+16 | ModifiedBy | Int | No | Yes | Admin Id if admin modified your account. For future use.
+
+<h4> UsersModified Table </h4>
+I have created this table to keep audit track of changes being made in Users table. Because this is our main table and if there is some problem arises we should be able to track and fix that. So I have created UsersModified table. Every new record which is never modified will only be available in Users table and if a record is ever modified then for every update executed on Users table, old record will be inserted into UsersModifed table and DateModified column will be updated in Users table. This will be done by Triggers created on Users table.
+
+We can keep this table in a separate database so that our production database and its transanction log will not become heavier day by day.
