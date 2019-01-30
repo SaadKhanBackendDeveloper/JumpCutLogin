@@ -9,3 +9,14 @@ F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Se
 F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Services\bin\Debug\RestSharp.xml
 F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Services\bin\Debug\Newtonsoft.Json.dll
 F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Services\bin\Debug\Newtonsoft.Json.xml
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\GitHub\JumpCutTest\JumpCut.Services\bin\Debug\JumpCut.Services.dll
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\GitHub\JumpCutTest\JumpCut.Services\bin\Debug\JumpCut.Services.pdb
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\GitHub\JumpCutTest\JumpCut.Services\bin\Debug\JumpCut.Common.dll
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\GitHub\JumpCutTest\JumpCut.Services\bin\Debug\Newtonsoft.Json.dll
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\GitHub\JumpCutTest\JumpCut.Services\bin\Debug\RestSharp.dll
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\GitHub\JumpCutTest\JumpCut.Services\bin\Debug\JumpCut.Common.pdb
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\GitHub\JumpCutTest\JumpCut.Services\bin\Debug\Newtonsoft.Json.xml
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\GitHub\JumpCutTest\JumpCut.Services\bin\Debug\RestSharp.xml
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\GitHub\JumpCutTest\JumpCut.Services\obj\Debug\JumpCut.Services.csprojResolveAssemblyReference.cache
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\GitHub\JumpCutTest\JumpCut.Services\obj\Debug\JumpCut.Services.dll
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\GitHub\JumpCutTest\JumpCut.Services\obj\Debug\JumpCut.Services.pdb

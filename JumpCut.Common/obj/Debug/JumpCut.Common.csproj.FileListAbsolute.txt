@@ -3,3 +3,9 @@ F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Co
 F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Common\obj\Debug\JumpCut.Common.dll
 F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Common\obj\Debug\JumpCut.Common.pdb
 F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\JumpCut\JumpCut.Common\bin\Debug\RestSharp.dll
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\GitHub\JumpCutTest\JumpCut.Common\bin\Debug\JumpCut.Common.dll
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\GitHub\JumpCutTest\JumpCut.Common\bin\Debug\JumpCut.Common.pdb
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\GitHub\JumpCutTest\JumpCut.Common\bin\Debug\RestSharp.dll
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\GitHub\JumpCutTest\JumpCut.Common\obj\Debug\JumpCut.Common.csprojResolveAssemblyReference.cache
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\GitHub\JumpCutTest\JumpCut.Common\obj\Debug\JumpCut.Common.dll
+F:\Work\CS\Projects\JumpCut LoginPage Test\Source\WorkingCopy\GitHub\JumpCutTest\JumpCut.Common\obj\Debug\JumpCut.Common.pdb

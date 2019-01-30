@@ -126,8 +126,8 @@
   <ItemGroup>
     <Content Include="Content\Fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Fonts\Linearicons-Free.svg" />
+    <Content Include="Content\GitHub\Application Design - 300120190515.png" />
     <Content Include="Content\Images\background.jpg" />
-    <Content Include="Content\Images\Cube.png" />
     <Content Include="Content\Images\Wedges.gif" />
     <Content Include="Content\Scripts\Custom\Login.js" />
     <Content Include="Content\Scripts\Custom\main.js" />
@@ -194,7 +194,6 @@
     <Content Include="Content\Fonts\Linearicons-Free.woff2" />
     <Content Include="Views\SignUp\Signup.cshtml" />
     <Content Include="Views\Login\PasswordResetRequest.cshtml" />
-    <Content Include="Views\SignUp\ConfirmEmail.cshtml" />
     <Content Include="Views\User\Home.cshtml" />
     <Content Include="Views\Login\PasswordReset.cshtml" />
     <None Include="Properties\PublishProfiles\SaadKhan.pubxml" />
