@@ -126,7 +126,7 @@
   <ItemGroup>
     <Content Include="Content\Fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Fonts\Linearicons-Free.svg" />
-    <Content Include="Content\GitHub\Application Design - 300120190515.png" />
+    <Content Include="Content\GitHub\AppStruct.png" />
     <Content Include="Content\Images\background.jpg" />
     <Content Include="Content\Images\Wedges.gif" />
     <Content Include="Content\Scripts\Custom\Login.js" />
